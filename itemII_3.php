@@ -1,0 +1,77 @@
+<?php
+require_once 'Part2.php';
+
+session_start();
+
+
+if (!isset($_SESSION['part2'])) {
+    $_SESSION['part2'] = new Part2();
+}
+$part2 = $_SESSION['part2'];
+
+
+if (isset($_POST['push']) && isset($_POST['value'])) {
+    $part2->push($_POST['value']);
+}
+
+
+if (isset($_POST['pop'])) {
+    $part2->pop();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack of integers arrays</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-white">
+    <div class="container mx-auto px-8 py-4 mt-8 bg-gray-50 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Part 2: Stack of integers arrays</h2>
+
+        <!-- Stack Controls -->
+        <div class="bg-white p-6 rounded-lg shadow mb-6">
+            <form method="post" class="flex gap-2 mb-6">
+                <input type="number" name="value" placeholder="Enter a number"
+                    class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="submit" name="push"
+                    class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Push
+                </button>
+                <button type="submit" name="pop"
+                    class="px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    Pop
+                </button>
+            </form>
+
+            <!-- Stack Display -->
+            <div class="border border-gray-200 rounded-md p-4 bg-gray-50">
+                <h3 class="text-lg font-semibold mb-3 text-gray-700">Stack Contents (Top to Bottom):</h3>
+                <div class="space-y-2">
+                    <?php
+                    $stack = $part2->getStack();
+                    if (empty($stack)) {
+                        echo '<p class="text-gray-500 italic">Stack is empty</p>';
+                    } else {
+                        foreach ($stack as $index => $value) {
+                            echo '<div class="px-4 py-2 bg-white border border-gray-200 rounded-md shadow-sm">';
+                            echo htmlspecialchars($value);
+                            echo '</div>';
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <a href="index.php" class="text-blue-600 hover:underline">Back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>
