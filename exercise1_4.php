@@ -28,7 +28,13 @@ function generateNumberTablePattern(): string
 
 <body class="bg-white">
     <div class="container mx-auto px-8 py-4 mt-8 bg-gray-50 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-4">Exercise 1.4: Number Table Pattern</h2>
+        <p class="text-2xl font-bold mb-4">Exercise 1.4: Number Table Pattern</p>
+        <div class="pb-12">
+            <p class="m-3">1. Create the Given pattern</p>
+            <img src="assets/exercise1.4.webp" class="w-1/4 h-auto mx-auto object-contain" alt="Number Table Pattern">
+
+        </div>
+        <p class="m-3">Answer:</p>
         <div class="flex items-center justify-center bg-gray-800 ">
             <pre class="text-white">
                 <br>

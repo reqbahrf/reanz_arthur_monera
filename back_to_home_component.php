@@ -1,1 +1,1 @@
-<p class="mt-4"><a href="index.php" class="text-blue-600 hover:underline">Back to Home</a></p>
+<p class="mt-4 text-end"><a href="index.php" class="text-blue-600 hover:underline">Back to Home</a></p>

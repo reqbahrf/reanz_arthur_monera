@@ -56,6 +56,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="bg-white p-6 rounded-lg shadow-md mb-8">
             <h1 class="text-2xl font-bold mb-6">Exercise 2.5: Consonant Grid Generator</h1>
+            <div class="pb-12">
+                <p class="m-3">
+                    5. Using a PHP POST method, ask the user to input 2 numbers
+                <ul class="list-disc ps-6 ml-6">
+                    <li>Create a Grid using 2 inputs as the length and width.</li>
+                    <li>Insert random CONSONANT letters into the grid</li>
+                    <li>Display the grid in table</li>
+                </ul>
+                </p>
+                <img src="assets/exercise2.5.webp" class="w-1/4 h-auto mx-auto object-contain" alt="Consonant Grid Generator">
+
+            </div>
+            <p class="m-3">Answer:</p>
             <form method="POST" class="space-y-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>

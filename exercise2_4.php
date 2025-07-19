@@ -69,6 +69,19 @@ if (isset($_POST['dequeue'])) {
 <body class="bg-white">
     <div class="container mx-auto px-8 py-4 mt-8 bg-gray-50 rounded-lg shadow-md">
         <h2 class="text-2xl font-bold mb-4">Exercise 2.4: Queue of integers arrays</h2>
+        <div class="pb-12">
+            <p class="m-3">
+                4. Create a queue of integers using arrays (first in first out)
+            <ul class="list-disc ps-6 ml-6">
+                <li>Create input fields and push a button to insert a new value</li>
+                <li>Create a pop button to remove the old value</li>
+                <li>Always display the existing queue content</li>
+                <li>Do not use pre-defined PHP array functions like <strong>array_pop</strong></li>
+            </ul>
+            </p>
+
+        </div>
+        <p class="m-3">Answer:</p>
 
         <!-- Queue Controls -->
         <div class="bg-white p-6 rounded-lg shadow mb-6">

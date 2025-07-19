@@ -10,9 +10,15 @@
 
 <body class="bg-white">
     <div class="container mx-auto px-8 py-4 mt-8 bg-gray-50 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-4">Exercise 2.6: Fix the code function to output the correct result</h2>
-        <div class="flex items-center justify-center bg-gray-800 ">
+        <p class="text-2xl font-bold mb-4">Exercise 2.6: Fix the code function to output the correct result</p>
+        <div class="pb-12">
+            <p class="m-3">
+                6. Fix the code function to output the correct result. <strong>Explain you answer</strong>
+            </p>
+            <img src="assets/exercise2.6.webp" alt="bubble sort code snippet" class="w-1/2 h-auto mx-auto object-contain">
+
         </div>
+        <p class="m-3">Explaination:</p>
         <?php include 'back_to_home_component.php'; ?>
     </div>
 </body>

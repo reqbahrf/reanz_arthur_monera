@@ -42,7 +42,20 @@ function generateRandomCharTable(): string
 
 <body class="bg-white">
     <div class="container mx-auto px-8 py-4 mt-8 bg-gray-50 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-4">Exercise 2.1: Random Character Table from a to k</h2>
+        <p class="text-2xl font-bold mb-4">Exercise 2.1: Random Character Table from a to k</p>
+        <div class="pb-12">
+            <p class="m-3">
+                1. Generate a random character from a -k
+            <ul class="list-disc ps-6 ml-6">
+                <li>Create a 4 x 5 table</li>
+                <li>Display all the random characters inside the table</li>
+                <li>Highlight all the character that belongs to the even column</li>
+            </ul>
+            </p>
+            <img src="assets/exercise2.1.webp" class="w-1/4 h-auto mx-auto object-contain" alt="Random Character Table">
+
+        </div>
+        <p class="m-3">Answer:</p>
         <div class="flex items-center justify-center bg-gray-800 ">
             <div class="text-white p-4 rounded-md overflow-auto">
                 <?php

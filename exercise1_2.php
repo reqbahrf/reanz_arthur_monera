@@ -43,7 +43,13 @@ function generateXPattern(): string
 
 <body class="bg-white">
     <div class="container mx-auto px-8 py-4 mt-8 bg-gray-50 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-4">Exercise 1.2: X Pattern</h2>
+        <p class="text-2xl font-bold mb-4">Exercise 1.2: X Pattern</p>
+        <div class="pb-12">
+            <p class="m-3">1. Create the Given pattern (x)</p>
+            <img src="assets/exercise1.2.webp" class="w-1/4 h-auto mx-auto object-contain" alt="X Pattern">
+
+        </div>
+        <p class="m-3">Answer:</p>
         <div class="flex items-center justify-center bg-gray-800 ">
             <pre class="text-white p-4 rounded-md overflow-auto">
                 <?php
