@@ -1,3 +1,35 @@
+<?php
+function generateRandomCharTable(): string
+{
+    $html = '<div class="p-4">';
+    $html .= '<table class="border border-gray-300 border-collapse w-full max-w-md mx-auto">';
+
+
+    for ($i = 0; $i < 4; $i++) {
+        $html .= '<tr>';
+
+        for ($j = 0; $j < 5; $j++) {
+
+            $char = rand(0, 1) ? chr(rand(97, 107)) : chr(rand(65, 75));
+            $ascii = ord($char);
+
+
+            $class = ($ascii % 2 === 0) ? 'bg-green-200' : '';
+
+            $html .= sprintf(
+                '<td class="border border-gray-300 p-3 text-center text-lg font-mono %s">%s</td>',
+                $class,
+                htmlspecialchars($char)
+            );
+        }
+        $html .= '</tr>';
+    }
+
+    $html .= '</table></div>';
+    return $html;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +46,7 @@
         <div class="flex items-center justify-center bg-gray-800 ">
             <div class="text-white p-4 rounded-md overflow-auto">
                 <?php
-                require_once 'Part2.php';
-                $part2 = new Part2();
-                echo $part2->generateRandomCharTable();
+                echo generateRandomCharTable();
                 ?>
             </div>
         </div>

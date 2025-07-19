@@ -1,22 +1,59 @@
 <?php
-require_once 'Part2.php';
 
 session_start();
 
+class Queue
+{
 
-if (!isset($_SESSION['part2'])) {
-    $_SESSION['part2'] = new Part2();
+    private $queue = [];
+    public function enqueue($value)
+    {
+        if (!empty($value)) {
+
+            $this->queue[] = $value;
+            return true;
+        }
+        return false;
+    }
+
+    public function dequeue()
+    {
+        if (empty($this->queue)) {
+            return null;
+        }
+
+
+        $value = $this->queue[0];
+
+
+        $newQueue = [];
+        for ($i = 1; $i < count($this->queue); $i++) {
+            $newQueue[] = $this->queue[$i];
+        }
+
+        $this->queue = $newQueue;
+        return $value;
+    }
+
+    public function getQueue()
+    {
+        return $this->queue;
+    }
 }
-$part2 = $_SESSION['part2'];
+
+if (!isset($_SESSION['queue'])) {
+    $_SESSION['queue'] = new Queue();
+}
+$queue = $_SESSION['queue'];
 
 
 if (isset($_POST['enqueue']) && isset($_POST['value'])) {
-    $part2->enqueue($_POST['value']);
+    $queue->enqueue($_POST['value']);
 }
 
 
 if (isset($_POST['dequeue'])) {
-    $part2->dequeue();
+    $queue->dequeue();
 }
 ?>
 <!DOCTYPE html>
@@ -53,7 +90,7 @@ if (isset($_POST['dequeue'])) {
                 <h3 class="text-lg font-semibold mb-3 text-gray-700">Queue Contents (Front to Back):</h3>
                 <div class="flex flex-wrap gap-2">
                     <?php
-                    $queue = $part2->getQueue();
+                    $queue = $queue->getQueue();
                     if (empty($queue)) {
                         echo '<p class="text-gray-500 italic">Queue is empty</p>';
                     } else {

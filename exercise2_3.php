@@ -1,22 +1,57 @@
 <?php
-require_once 'Part2.php';
 
 session_start();
 
+class Stack
+{
+    private $stack = [];
+    public function push($value)
+    {
+        if (!empty($value)) {
+            $newStack = [$value];
+            foreach ($this->stack as $item) {
+                $newStack[] = $item;
+            }
+            $this->stack = $newStack;
+            return true;
+        }
+        return false;
+    }
 
-if (!isset($_SESSION['part2'])) {
-    $_SESSION['part2'] = new Part2();
+    public function pop()
+    {
+        if (empty($this->stack)) {
+            return null;
+        }
+        $value = $this->stack[0];
+        $newStack = [];
+        for ($i = 1; $i < count($this->stack); $i++) {
+            $newStack[] = $this->stack[$i];
+        }
+        $this->stack = $newStack;
+        return $value;
+    }
+
+    public function getStack()
+    {
+        return $this->stack;
+    }
 }
-$part2 = $_SESSION['part2'];
+
+
+if (!isset($_SESSION['stack'])) {
+    $_SESSION['stack'] = new Stack();
+}
+$stack = $_SESSION['stack'];
 
 
 if (isset($_POST['push']) && isset($_POST['value'])) {
-    $part2->push($_POST['value']);
+    $stack->push($_POST['value']);
 }
 
 
 if (isset($_POST['pop'])) {
-    $part2->pop();
+    $stack->pop();
 }
 ?>
 <!DOCTYPE html>
@@ -53,7 +88,7 @@ if (isset($_POST['pop'])) {
                 <h3 class="text-lg font-semibold mb-3 text-gray-700">Stack Contents (Top to Bottom):</h3>
                 <div class="space-y-2">
                     <?php
-                    $stack = $part2->getStack();
+                    $stack = $stack->getStack();
                     if (empty($stack)) {
                         echo '<p class="text-gray-500 italic">Stack is empty</p>';
                     } else {

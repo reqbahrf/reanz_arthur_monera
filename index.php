@@ -18,21 +18,21 @@
                 <li>
                     <h3 class="text-lg font-semibold mt-4 mb-2">Part 1</h3>
                     <ul class="ml-4 space-y-1">
-                        <li><a href="ItemI_1.php" class="text-blue-600 hover:underline">Item 1.1 (Diamond Pattern)</a></li>
-                        <li><a href="ItemI_2.php" class="text-blue-600 hover:underline">Item 1.2 (X Pattern)</a></li>
-                        <li><a href="ItemI_3.php" class="text-blue-600 hover:underline">Item 1.3 (Symmetrical Triangle Pattern)</a></li>
-                        <li><a href="ItemI_4.php" class="text-blue-600 hover:underline">Item 1.4 (Number Table Pattern)</a></li>
+                        <li><a href="exercise1_1.php" class="text-blue-600 hover:underline">Exercise 1.1 (Diamond Pattern)</a></li>
+                        <li><a href="exercise1_2.php" class="text-blue-600 hover:underline">Exercise 1.2 (X Pattern)</a></li>
+                        <li><a href="exercise1_3.php" class="text-blue-600 hover:underline">Exercise 1.3 (Number Triangle Pattern)</a></li>
+                        <li><a href="exercise1_4.php" class="text-blue-600 hover:underline">Exercise 1.4 (Number Table Pattern)</a></li>
                     </ul>
                 </li>
                 <li>
                     <h3 class="text-lg font-semibold mt-4 mb-2">Part 2</h3>
                     <ul class="ml-4 space-y-1">
-                        <li><a href="itemII_1.php" class="text-blue-600 hover:underline">Item 2.1 (Random Character Table)</a></li>
-                        <li><a href="itemII_2.php" class="text-blue-600 hover:underline">Item 2.2 (Manipulation of Multi Dimensional Array)</a></li>
-                        <li><a href="itemII_3.php" class="text-blue-600 hover:underline">Item 2.3 (Stack of integers arrays)</a></li>
-                        <li><a href="itemII_4.php" class="text-blue-600 hover:underline">Item 2.4 (Queue of integers arrays)</a></li>
-                        <li><a href="itemII_5.php" class="text-blue-600 hover:underline">Item 2.5 (Consonant Grid Generator)</a></li>
-                        <li><a href="itemII_6.php" class="text-blue-600 hover:underline">Item 2.6 (Fix the code function to output the correct result)</a></li>
+                        <li><a href="exercise2_1.php" class="text-blue-600 hover:underline">Exercise 2.1 (Random Character Table)</a></li>
+                        <li><a href="exercise2_2.php" class="text-blue-600 hover:underline">Exercise 2.2 (Manipulation of Multi Dimensional Array)</a></li>
+                        <li><a href="exercise2_3.php" class="text-blue-600 hover:underline">Exercise 2.3 (Stack of integers arrays)</a></li>
+                        <li><a href="exercise2_4.php" class="text-blue-600 hover:underline">Exercise 2.4 (Queue of integers arrays)</a></li>
+                        <li><a href="exercise2_5.php" class="text-blue-600 hover:underline">Exercise 2.5 (Consonant Grid Generator)</a></li>
+                        <li><a href="exercise2_6.php" class="text-blue-600 hover:underline">Exercise 2.6 (Fix the code function to output the correct result)</a></li>
                     </ul>
                 </li>
             </ul>

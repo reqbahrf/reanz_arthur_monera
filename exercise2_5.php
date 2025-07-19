@@ -1,7 +1,35 @@
 <?php
-require_once 'Part2.php';
+function generateConsonantGrid(int $rows, int $cols): string
+{
+    $consonants = array_merge(
+        array_diff(range('A', 'Z'), ['A', 'E', 'I', 'O', 'U']),
+        array_diff(range('a', 'z'), ['a', 'e', 'i', 'o', 'u'])
+    );
 
-$part2 = new Part2();
+    $html = '<div class="overflow-x-auto">';
+    $html .= '<table class="min-w-full border border-gray-300 border-collapse">';
+
+    for ($i = 0; $i < $rows; $i++) {
+        $html .= '<tr>';
+
+        for ($j = 0; $j < $cols; $j++) {
+            $randomConsonant = $consonants[array_rand($consonants)];
+
+            $bgClass = ($i + $j) % 2 === 0 ? 'bg-gray-50' : 'bg-white';
+
+            $html .= sprintf(
+                '<td class="%s border border-gray-300 p-3 text-center text-lg font-mono">%s</td>',
+                $bgClass,
+                htmlspecialchars($randomConsonant)
+            );
+        }
+
+        $html .= '</tr>';
+    }
+
+    $html .= '</table></div>';
+    return $html;
+}
 $gridHtml = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -9,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $width = isset($_POST['width']) ? (int)$_POST['width'] : 0;
 
     if ($length > 0 && $width > 0) {
-        $gridHtml = $part2->generateConsonantGrid($length, $width);
+        $gridHtml = generateConsonantGrid($length, $width);
     }
 }
 ?>
