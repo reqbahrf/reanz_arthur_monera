@@ -51,11 +51,7 @@ function generateXPattern(): string
         </div>
         <p class="m-3">Answer:</p>
         <div class="flex items-center justify-center bg-gray-800 ">
-            <pre class="text-white p-4 rounded-md overflow-auto">
-                <?php
-                echo generateXPattern();
-                ?>
-            </pre>
+            <pre class="text-white"><br><?php echo generateXPattern(); ?><br></pre>
         </div>
         <?php include 'back_to_home_component.php'; ?>
     </div>

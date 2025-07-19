@@ -7,7 +7,7 @@ function generateNumberTablePattern(): string
 
     for ($i = 1; $i <= $rows; $i++) {
         for ($j = 1; $j <= $cols; $j++) {
-            $value = $i * $j * pow(2, $j - 1);
+            $value = $i * pow($i + 1, $j - 1);
             $output .= str_pad($value, 7, " ", STR_PAD_LEFT);
         }
         $output .= "\n";
@@ -36,12 +36,7 @@ function generateNumberTablePattern(): string
         </div>
         <p class="m-3">Answer:</p>
         <div class="flex items-center justify-center bg-gray-800 ">
-            <pre class="text-white">
-                <br>
-                <?php
-                echo generateNumberTablePattern();
-                ?>
-            </pre>
+            <pre class="text-white"><br><?php echo generateNumberTablePattern(); ?><br></pre>
         </div>
         <?php include 'back_to_home_component.php'; ?>
     </div>

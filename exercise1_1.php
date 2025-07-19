@@ -47,11 +47,7 @@ function generateDiamondPattern(): string
         </div>
         <p class="m-3">Answer:</p>
         <div class="flex items-center justify-center bg-gray-800 ">
-            <pre class="text-white">
-                <?php
-                echo generateDiamondPattern();
-                ?>
-            </pre>
+            <pre class="text-white"><br><?php echo generateDiamondPattern(); ?><br></pre>
         </div>
         <?php include 'back_to_home_component.php'; ?>
     </div>
