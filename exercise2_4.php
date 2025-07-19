@@ -68,7 +68,7 @@ if (isset($_POST['dequeue'])) {
 
 <body class="bg-white">
     <div class="container mx-auto px-8 py-4 mt-8 bg-gray-50 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-4">Part 2: Queue of integers arrays</h2>
+        <h2 class="text-2xl font-bold mb-4">Exercise 2.4: Queue of integers arrays</h2>
 
         <!-- Queue Controls -->
         <div class="bg-white p-6 rounded-lg shadow mb-6">

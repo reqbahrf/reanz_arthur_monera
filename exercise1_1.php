@@ -39,7 +39,7 @@ function generateDiamondPattern(): string
 
 <body class="bg-white">
     <div class="container mx-auto px-8 py-4 mt-8 bg-gray-50 rounded-lg shadow-md">
-        <h2 class="text-2xl font-bold mb-4">Part 1: Diamond Pattern</h2>
+        <h2 class="text-2xl font-bold mb-4">Exercise 1.1: Diamond Pattern</h2>
         <div class="flex items-center justify-center bg-gray-800 ">
             <pre class="text-white">
                 <br>
@@ -48,7 +48,7 @@ function generateDiamondPattern(): string
                 ?>
             </pre>
         </div>
-        <p class="mt-4"><a href="index.php" class="text-blue-600 hover:underline">Back to Home</a></p>
+        <?php include 'back_to_home_component.php'; ?>
     </div>
 </body>
 

@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="container mx-auto">
 
         <div class="bg-white p-6 rounded-lg shadow-md mb-8">
-            <h1 class="text-2xl font-bold mb-6">Part 2: Consonant Grid Generator</h1>
+            <h1 class="text-2xl font-bold mb-6">Exercise 2.5: Consonant Grid Generator</h1>
             <form method="POST" class="space-y-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </button>
                 </div>
             </form>
-            <p class="mt-4"><a href="index.php" class="text-blue-600 hover:underline">Back to Home</a></p>
+            <?php include 'back_to_home_component.php'; ?>
         </div>
 
         <?php if (!empty($gridHtml)): ?>
