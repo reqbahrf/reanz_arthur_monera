@@ -19,6 +19,20 @@
 
         </div>
         <p class="m-3">Explaination:</p>
+        <div class="w-3/4 mx-auto">
+            <p class="text-justify pb-5 indent-8">From what I know, bubble sort is a sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until the list is fully sorted.</p>
+            <p class="text-justify pb-5">In the code snippet, the swapping logic block has a logical error.
+            <pre class="bg-gray-800 text-white p-3 m-3 rounded w-1/2 mx-auto">
+            $temp = $lists[$child + 1];
+            $lists[$child] = $lists[$child + 1];</pre>
+            In the second line the value of <strong>$lists[$child]</strong> overrides the value of <strong>$lists[$child + 1]</strong> before it has been saved so now both <strong>$lists[$child]</strong> and <strong>$lists[$child + 1]</strong> are the same value. in short the swapping is not working.
+            <br>To fix this, we store the value of <strong>$lists[$child]</strong> in a temporary variable before overriding it.</p>
+            <pre class="bg-gray-800 text-white p-3 m-3 rounded w-1/2 mx-auto">
+            $temp = $lists[$child];
+            $lists[$child] = $lists[$child + 1];
+            $lists[$child] = $temp;
+            </pre>
+        </div>
         <?php include 'back_to_home_component.php'; ?>
     </div>
 </body>

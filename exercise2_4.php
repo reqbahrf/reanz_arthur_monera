@@ -118,9 +118,7 @@ if (isset($_POST['dequeue'])) {
             </div>
         </div>
 
-        <div class="mt-4">
-            <a href="index.php" class="text-blue-600 hover:underline">Back to Home</a>
-        </div>
+        <?php include 'back_to_home_component.php'; ?>
     </div>
 </body>
 

@@ -14,16 +14,16 @@ function generateXPattern(): string
                 $distance_from_mid = abs($row - $mid);
 
                 if ($distance_from_mid == 0) {
-                    $pattern .= "1";
+                    $pattern .= "1  ";
                 } elseif ($distance_from_mid == 2) {
-                    $pattern .= "3";
+                    $pattern .= "3  ";
                 } elseif ($distance_from_mid == 4) {
-                    $pattern .= "5";
+                    $pattern .= "5  ";
                 } else {
-                    $pattern .= "*";
+                    $pattern .= "*  ";
                 }
             } else {
-                $pattern .= " ";
+                $pattern .= "   ";
             }
         }
         $pattern .= "\n";

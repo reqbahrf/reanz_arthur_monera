@@ -29,7 +29,7 @@ function manipulationOfMultiDimensionalArray(): string
 
 
     $html = '<div class="p-4">';
-    $html .= '<table class="border border-gray-300 border-collapse w-full max-w-md mx-auto">';
+    $html .= '<table class="border-collapse w-full max-w-md mx-auto">';
 
 
     foreach ($grid as $rowIndex => $row) {

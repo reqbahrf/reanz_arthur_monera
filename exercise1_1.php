@@ -7,18 +7,19 @@ function generateDiamondPattern(): string
     $diamond_mid = floor($diamond_height / 2);
 
     $overall_mid = floor($size / 2);
+    $width_factor = 4;
 
     for ($i = 0; $i < $size; $i++) {
         $effective_row = ($i <= $overall_mid) ? $i : $size - 1 - $i;
 
         $distance_from_diamond_mid = abs($effective_row - $diamond_mid);
 
-        $leading_spaces = 9 + $distance_from_diamond_mid;
+        $leading_spaces = 9 + ($distance_from_diamond_mid * $width_factor);
         $pattern .= str_repeat(" ", $leading_spaces);
 
         $pattern .= "*";
         if ($distance_from_diamond_mid < $diamond_mid) {
-            $inner_spaces = ($diamond_mid - $distance_from_diamond_mid) * 2 - 1;
+            $inner_spaces = ($diamond_mid - $distance_from_diamond_mid) * (2 * $width_factor) - 1;
             $pattern .= str_repeat(" ", $inner_spaces);
             $pattern .= "*";
         }
